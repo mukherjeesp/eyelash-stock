@@ -27,7 +27,7 @@ layers:
   - L
   - {t: ;, s: ':'}
   - {t: '''', s: '"'}
-  - $$mdi:apple-keyboard-control$$
+  - $$mdi:apple-keyboard-shift$$
   - Z
   - X
   - C
@@ -41,7 +41,7 @@ layers:
   - {t: /, s: '?'}
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:keyboard-space$$
-  - LGUI
+  - $$mdi:apple-keyboard-control$$
   - raise
   - {t: '$$mdi:keyboard-return$$', h: '3'}
   - $$mdi:arrow-right-bold$$
