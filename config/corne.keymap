@@ -107,9 +107,9 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &out OUT_BLE     &out OUT_USB  &trans    &trans      &trans         &mmv MOVE_UP     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&trans  &kp EXCLAMATION  &kp AT_SIGN   &kp HASH  &kp DOLLAR  &kp PERCENT    &mmv MOVE_DOWN   &kp CARET  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&trans  &out OUT_USB     &out OUT_BLE  &none     &none       &mkp MB5       &mmv MOVE_LEFT   &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
+&trans  &out OUT_BLE     &out OUT_USB  &trans    &trans      &trans         &mmv MOVE_UP     &trans     &trans     &trans    &trans    &trans    &kp BSPC
+&trans  &kp EXCLAMATION  &kp AT_SIGN   &kp HASH  &kp DOLLAR  &kp PERCENT    &mmv MOVE_DOWN   &kp CARET  &kp EQUAL  &kp LBKT  &kp RBKT  &kp BSLH  &kp GRAVE
+&trans  &out OUT_USB     &out OUT_BLE  &none     &none       &mkp MB5       &mmv MOVE_LEFT   &kp UNDER  &kp PLUS   &kp LBRC  &kp RBRC  &kp PIPE  &kp TILDE
                          &trans        &trans    &trans      &kp SPACE      &mmv MOVE_RIGHT  &kp RET    &trans     &trans
                                                                             &mkp LCLK
             >;
