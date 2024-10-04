@@ -26,7 +26,7 @@ layers:
   - K
   - L
   - {t: ;, s: ':'}
-  - {t: '''', s: '"'}
+  - {t: '-', s: _}
   - $$mdi:apple-keyboard-control$$
   - Z
   - X
@@ -39,7 +39,7 @@ layers:
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
-  - $$mdi:keyboard-esc$$
+  - {t: '''', s: '"'}
   - $$mdi:keyboard-space$$
   - LGUI
   - lower
