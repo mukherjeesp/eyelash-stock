@@ -1,4 +1,4 @@
-layout: {qmk_keyboard: corne_rotated, qmk_layout: LAYOUT_split_3x6_3}
+layout: {qmk_keyboard: corne_rotated, layout_name: LAYOUT_split_3x6_3}
 layers:
   default:
   - $$mdi:keyboard-tab$$
@@ -13,7 +13,7 @@ layers:
   - I
   - O
   - P
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: '-', s: _}
   - '&td0'
   - A
   - S
@@ -26,7 +26,7 @@ layers:
   - K
   - L
   - {t: ;, s: ':'}
-  - {t: '-', s: _}
+  - {t: '=', s: +}
   - $$mdi:apple-keyboard-control$$
   - Z
   - X
@@ -46,7 +46,7 @@ layers:
   - {t: '$$mdi:keyboard-space$$', h: '3'}
   - $$mdi:arrow-right-bold$$
   - {t: '$$mdi:keyboard-return$$', h: '3'}
-  - raise
+  - {t: '$$mdi:backspace$$', h: raise}
   - $$mdi:apple-keyboard-command$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   lower:
