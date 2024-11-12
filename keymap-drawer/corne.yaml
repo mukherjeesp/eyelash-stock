@@ -13,7 +13,7 @@ layers:
   - I
   - O
   - P
-  - {t: '-', s: _}
+  - {t: '=', s: +}
   - '&td0'
   - A
   - S
@@ -26,7 +26,7 @@ layers:
   - K
   - L
   - {t: ;, s: ':'}
-  - {t: '=', s: +}
+  - {t: '-', s: _}
   - $$mdi:apple-keyboard-control$$
   - Z
   - X
@@ -46,8 +46,8 @@ layers:
   - {t: '$$mdi:keyboard-space$$', h: '3'}
   - $$mdi:arrow-right-bold$$
   - {t: '$$mdi:keyboard-return$$', h: '3'}
-  - {t: RIGHT WIN, h: raise}
   - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: RIGHT WIN, h: raise}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   lower:
   - $$mdi:keyboard-esc$$
@@ -144,8 +144,8 @@ layers:
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - $$mdi:mouse-left-click-outline$$
   '3':
   - {t: '$$mdi:transfer$$', type: trans}
