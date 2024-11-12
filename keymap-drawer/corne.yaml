@@ -46,8 +46,8 @@ layers:
   - {t: '$$mdi:keyboard-space$$', h: '3'}
   - $$mdi:arrow-right-bold$$
   - {t: '$$mdi:keyboard-return$$', h: '3'}
-  - {t: '$$mdi:backspace$$', h: raise}
-  - $$mdi:apple-keyboard-command$$
+  - {t: RIGHT WIN, h: raise}
+  - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   lower:
   - $$mdi:keyboard-esc$$
