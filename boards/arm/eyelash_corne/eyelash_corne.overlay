@@ -1,0 +1,14 @@
+/dts-v1/;
+/ {
+    chosen {
+        zmk,underglow = &underglow;
+    };
+
+    underglow: underglow {
+        compatible = "zmk,underglow";
+        label = "RGB Underglow";
+        chain-length = <30>; // Adjust this value based on the number of LEDs
+        color-mapping = <0 1 2>; // Adjust this based on your RGB order
+        io-channels = <&pwm0 0>, <&pwm0 1>, <&pwm0 2>;
+    };
+};
