@@ -67,11 +67,11 @@
             //                                                      enter
 
             bindings = <
-&kp GRAVE       &kp Q  &kp W         &kp E                      &kp R  &kp T          &kp UP_ARROW     &kp Y        &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&kp TAB         &kp A  &kp S         &kp D                      &kp F  &kp G          &kp DOWN_ARROW   &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LEFT_SHIFT  &kp Z  &kp X         &kp C                      &kp V  &kp B          &kp LEFT_ARROW   &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
-                       &kp LEFT_ALT  &mt LEFT_CONTROL LEFT_ALT  &mo 1  &lt 3 ENTER    &kp RIGHT_ARROW  &lt 3 SPACE  &mo 2  &kp RALT
-                                                                                      &kp ENTER
+&kp GRAVE       &kp Q  &kp W         &kp E             &kp R  &kp T          &kp UP_ARROW     &kp Y        &kp U  &kp I      &kp O    &kp P     &kp BSPC
+&kp TAB         &kp A  &kp S         &kp D             &kp F  &kp G          &kp DOWN_ARROW   &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LEFT_SHIFT  &kp Z  &kp X         &kp C             &kp V  &kp B          &kp LEFT_ARROW   &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
+                       &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 1  &lt 3 ENTER    &kp RIGHT_ARROW  &lt 3 SPACE  &mo 2  &kp RALT
+                                                                             &kp ENTER
             >;
 
             label = "QWERTY";
