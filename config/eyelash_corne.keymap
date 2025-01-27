@@ -32,6 +32,20 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
+
+        Tab_switching: Tab_switching {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "TAB_SWITCHING";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp LC(O)>, <&kp P>;
+        };
+
+        App_switching: App_switching {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "APP_SWITCHING";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp LG(TAB)>, <&kp LG(LS(TAB))>;
+        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -55,6 +69,11 @@
             bindings = <&kp DEL>;
             key-positions = <12 11>;
         };
+
+        Delete_left {
+            bindings = <&kp DEL>;
+            key-positions = <0 1>;
+        };
     };
 
     keymap {
@@ -63,10 +82,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T                               &kp UP                &kp Y        &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&td0       &kp A  &kp S  &kp D     &kp F  &kp G                     &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp SPACE              &kp DOWN              &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                         &kp LGUI  &mo 1  &lt 3 SPACE                                               &lt 3 ENTER  &mo 2  &kp RALT
+&mt BACKSPACE ESCAPE  &kp Q  &kp W  &kp E     &kp R  &kp T                               &kp UP                &kp Y        &kp U  &kp I      &kp O    &kp P     &kp BSPC
+&td0                  &kp A  &kp S  &kp D     &kp F  &kp G                     &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LCTRL             &kp Z  &kp X  &kp C     &kp V  &kp B        &kp SPACE              &kp DOWN              &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
+                                    &kp LGUI  &mo 1  &lt 3 SPACE                                               &lt 3 ENTER  &mo 2  &kp RALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
