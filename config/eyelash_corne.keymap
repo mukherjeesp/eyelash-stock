@@ -100,10 +100,10 @@
         raise_layer {
             display-name = "SYMBOL";
             bindings = <
-&kp TAB    &kp NUMBER_1  &kp NUMBER_2          &kp NUMBER_3           &kp NUMBER_4  &kp N5                               &mmv MOVE_UP                     &kp NUMBER_6  &kp N7     &kp N8    &kp N9    &kp N0    &kp BSPC
-&kp MINUS  &kp EQUAL     &kp LBKT              &kp RBKT               &kp BSLH      &kp APOS             &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS     &kp EQUAL  &kp LBKT  &kp RBKT  &kp BSLH  &kp GRAVE
-&kp COMMA  &kp DOT       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp FSLH      &kp SEMI   &trans                    &mmv MOVE_DOWN                   &kp UNDER     &kp PLUS   &kp LBRC  &kp RBRC  &kp PIPE  &kp TILDE
-                                               &sk LCTRL              &sk LEFT_GUI  &kp SPACE                                                             &kp RET       &trans     &trans
+&kp GRAVE  &kp NUMBER_1  &kp NUMBER_2          &kp NUMBER_3           &kp NUMBER_4  &kp N5                                    &mmv MOVE_UP                     &kp NUMBER_6  &kp N7          &kp N8        &kp N9         &kp N0     &kp BSPC
+&kp MINUS  &kp EQUAL     &kp LBKT              &kp RBKT               &kp BSLH      &kp APOS                  &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LC(LEFT)  &kp LEFT_ARROW  &kp UP_ARROW  &kp DOWN       &kp RIGHT  &kp LC(RIGHT)
+&kp SPACE  &kp DOT       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp FSLH      &sk LEFT_ALT    &trans                    &mmv MOVE_DOWN                   &sl 4         &kp C_AC_HOME   &kp PAGE_UP   &kp PAGE_DOWN  &kp END    &kp ENTER
+                                               &sk LCTRL              &sk LEFT_GUI  &sk LEFT_SHIFT                                                             &trans        &trans          &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
