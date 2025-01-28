@@ -95,10 +95,10 @@
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&bt BT_CLR     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                      &mmv MOVE_UP                     &kp K_MUTE  &kp C_PLAY_PAUSE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE
-&kp BACKSPACE  &kp K_CUT     &kp K_COPY    &kp K_PASTE   &kp K_UNDO    &kp K_REDO                        &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp SPACE   &kp SPACE         &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE
-&trans         &kp N1        &kp N1        &trans        &trans        &kp N1        &kp C_PLAY_PAUSE                    &mmv MOVE_DOWN                   &kp SPACE   &kp SPACE         &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE
-                                           &trans        &trans        &trans                                                                             &kp INS     &kp DEL           &trans
+&kp ESCAPE     &kp LG(N1)  &kp LG(N2)  &kp LG(N3)   &kp LG(N4)  &kp LG(N5)                                      &mmv MOVE_UP                     &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &studio_unlock
+&kp BACKSPACE  &kp K_CUT   &kp K_COPY  &kp K_PASTE  &kp K_UNDO  &kp K_REDO                      &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp SPACE   &kp SPACE     &kp SPACE     &kp SPACE     &kp SPACE     &kp SPACE
+&trans         &kp N1      &kp N1      &trans       &trans      &kp N1      &kp C_PLAY_PAUSE                    &mmv MOVE_DOWN                   &kp SPACE   &kp SPACE     &kp SPACE     &kp SPACE     &kp SPACE     &kp SPACE
+                                       &trans       &trans      &trans                                                                           &kp INS     &kp DEL       &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
