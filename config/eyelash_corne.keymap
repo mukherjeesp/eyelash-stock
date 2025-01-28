@@ -45,6 +45,13 @@
             #sensor-binding-cells = <0>;
             bindings = <&kp LG(TAB)>, <&kp LG(LS(TAB))>;
         };
+
+        tap_layer: tap_layer {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_LAYER";
+            #binding-cells = <0>;
+            bindings = <&mo 2>, <&kp F>;
+        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -64,8 +71,8 @@
     combos {
         compatible = "zmk,combos";
 
-        Delete_left {
-            bindings = <&kp DEL>;
+        Escape {
+            bindings = <&kp ESCAPE>;
             key-positions = <0 1>;
         };
     };
@@ -76,10 +83,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&mt BACKSPACE ESCAPE  &kp Q  &kp W  &kp E     &kp R      &kp T                             &kp UP                &kp Y        &kp U          &kp I           &kp O    &kp P     &kp DELETE
-&td0                  &kp A  &kp S  &kp D     &kp F      &kp G                   &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J          &kp K           &kp L    &kp SEMI  &kp SQT
-&kp LCTRL             &kp Z  &kp X  &kp C     &kp V      &kp B      &kp SPACE              &kp DOWN              &kp N        &kp M          &kp COMMA       &kp DOT  &kp FSLH  &key_repeat
-                                    &kp LGUI  &kp SPACE  &lt 3 TAB                                               &lt 3 ENTER  &kp BACKSPACE  &sk LEFT_SHIFT
+&kp BACKSPACE  &kp Q  &kp W  &kp E     &kp R      &kp T                             &kp UP                &kp Y        &kp U          &kp I           &kp O    &kp P     &kp DELETE
+&td0           &kp A  &kp S  &kp D     &kp F      &kp G                   &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J          &kp K           &kp L    &kp SEMI  &kp SQT
+&tap_layer     &kp Z  &kp X  &kp C     &kp V      &kp B      &kp SPACE              &kp DOWN              &kp N        &kp M          &kp COMMA       &kp DOT  &kp FSLH  &key_repeat
+                             &kp LGUI  &kp SPACE  &lt 1 TAB                                               &lt 2 ENTER  &kp BACKSPACE  &sk LEFT_SHIFT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
