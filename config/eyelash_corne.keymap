@@ -88,13 +88,13 @@
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&trans  &kp N1           &kp N2          &kp N3        &kp N4        &kp N5                                         &mmv MOVE_UP                     &kp N6           &kp N7           &kp N8           &kp N9           &kp N0    &kp BSPC
-&trans  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp HOME  &kp PG_UP
-&trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF  &kp C_MUTE                    &mmv MOVE_DOWN                   &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END   &kp PG_DN
-                                         &trans        &trans        &trans                                                                          &kp INS          &kp DEL          &trans
+&bt BT_CLR      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                      &mmv MOVE_UP                     &kp K_MUTE  &kp C_PLAY_PAUSE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE
+&kp BACKSPACE   &kp N1        &kp N1        &kp N1        &kp N1        &kp N1                            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp SPACE   &kp SPACE         &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE
+&sk LEFT_SHIFT  &kp N1        &kp N1        &trans        &trans        &kp N1        &kp C_PLAY_PAUSE                    &mmv MOVE_DOWN                   &kp SPACE   &kp SPACE         &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE
+                                            &trans        &trans        &trans                                                                             &kp INS     &kp DEL           &trans
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
         };
 
         raise_layer {
