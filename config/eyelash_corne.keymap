@@ -1,3 +1,4 @@
+#define HOST_OS 1
 #include <behaviors.dtsi>
 #include "zmk-helpers/helper.h"
 #include <dt-bindings/zmk/bt.h>
