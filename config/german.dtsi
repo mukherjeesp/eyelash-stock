@@ -1,0 +1,84 @@
+	/* German umlauts */
+ZMK_UNICODE_PAIR(   de_ae,      N0, N0,  E, N4,    N0, N0,  C, N4)
+ZMK_UNICODE_PAIR(   de_oe,      N0, N0,  F, N6,    N0, N0,  D, N6)
+ZMK_UNICODE_PAIR(   de_ue,      N0, N0,  F,  C,    N0, N0,  D,  C)
+ZMK_UNICODE_PAIR(de_eszett,     N0, N0,  D,  F,    N1, E,   N9, E)
+
+ZMK_UNICODE_PAIR(fr_ae,             N0, N0, E, N6,   N0, N0, C, N6)  // æ/Æ
+ZMK_UNICODE_PAIR(fr_oe,             N0, N1, N5, N3,  N0, N1, N5, N2) // œ/Œ
+ZMK_UNICODE_PAIR(fr_a_grave,        N0, N0, E, N0,   N0, N0, C, N0)  // à/À
+ZMK_UNICODE_PAIR(fr_a_circumflex,   N0, N0, E, N2,   N0, N0, C, N2)  // â/Â
+ZMK_UNICODE_PAIR(fr_c_cedilla,      N0, N0, E, N7,   N0, N0, C, N7)  // ç/Ç
+ZMK_UNICODE_PAIR(fr_e_grave,        N0, N0, E, N8,   N0, N0, C, N8)  // è/È
+ZMK_UNICODE_PAIR(fr_e_acute,        N0, N0, E, N9,   N0, N0, C, N9)  // é/É
+ZMK_UNICODE_PAIR(fr_e_circumflex,   N0, N0, E, A,    N0, N0, C, A)   // ê/Ê
+ZMK_UNICODE_PAIR(fr_e_diaeresis,    N0, N0, E, B,    N0, N0, C, B)   // ë/Ë
+ZMK_UNICODE_PAIR(fr_i_circumflex,   N0, N0, E, E,    N0, N0, C, E)   // î/Î
+ZMK_UNICODE_PAIR(fr_i_diaeresis,    N0, N0, E, F,    N0, N0, C, F)   // ï/Ï
+ZMK_UNICODE_PAIR(fr_o_circumflex,   N0, N0, F, N4,   N0, N0, D, N4)  // ô/Ô
+ZMK_UNICODE_PAIR(fr_u_grave,        N0, N0, F, N9,   N0, N0, D, N9)  // ù/Ù
+ZMK_UNICODE_PAIR(fr_u_circumflex,   N0, N0, F, B,    N0, N0, D, B)   // û/Û
+ZMK_UNICODE_PAIR(fr_u_diaeresis,    N0, N0, F, C,    N0, N0, D, C)   // ü/Ü
+ZMK_UNICODE_PAIR(fr_y_diaeresis,    N0, N0, F, F,    N0, N1, N7, N8) // ÿ/Ÿ
+
+ZMK_COMBO(ae,  &de_ae , 36 13, 0, 450)
+ZMK_COMBO(oe,  &de_oe , 36 22, 0, 450)
+ZMK_COMBO(ue,  &de_ue , 36 8, 0, 450)
+				
+ZMK_BEHAVIOR(fr_a, tap_dance,
+    tapping-term-ms = <200>;
+    bindings = <&fr_a_grave>, <&fr_a_circumflex>;
+)
+
+
+ZMK_BEHAVIOR(fr_eb, tap_dance,
+    tapping-term-ms = <200>;
+    bindings = <&fr_e_acute>, <&fr_e_grave>, <&fr_e_circumflex>;
+)
+
+ZMK_BEHAVIOR(fr_i_o, tap_dance,
+    tapping-term-ms = <200>;
+    bindings = <&fr_i_circumflex>, <&fr_o_circumflex>;
+)
+
+ZMK_BEHAVIOR(fr_u_c, tap_dance,
+    tapping-term-ms = <200>;
+    bindings = <&fr_u_circumflex>, <&fr_c_cedilla>;
+)
+
+ZMK_BEHAVIOR(deae, tap_dance,
+    tapping-term-ms = <200>;
+    bindings = <&kp LC(C)>, <&de_ae>;
+)
+
+ZMK_BEHAVIOR(deoe, tap_dance,
+    tapping-term-ms = <200>;
+    bindings = <&kp LC(V)>, <&de_oe>;
+)
+
+ZMK_BEHAVIOR(deue, tap_dance,
+    tapping-term-ms = <200>;
+    bindings = <&kp LC(X)>, <&de_ue>;
+)
+
+ZMK_BEHAVIOR(hrm, hold_tap,
+    flavor = "tap-preferred";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <200>;
+    require-prior-idle-ms = <125>;
+    bindings = <&kp>, <&kp>;
+)
+
+ZMK_BEHAVIOR(tap_ct, tap_dance,
+    tapping-term-ms = <200>;
+    bindings = <&kp LCTRL>, <&kp LEFT_ALT>;
+)
+
+ZMK_BEHAVIOR(tap_mu, tap_dance,
+    tapping-term-ms = <200>;
+    bindings = <&kp C_NEXT>, <&kp C_PREV>;
+)
+
+ZMK_COMBO(layer_3,  &tog 3, 0 1, ALL, 25)
+	
+
