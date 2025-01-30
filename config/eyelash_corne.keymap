@@ -97,7 +97,7 @@
             display-name = "BASE";
             bindings = <
 &kp BACKSPACE  &kp Q  &kp W  &kp E     &kp R      &kp T                             &kp UP                &kp Y        &kp U          &kp I           &kp O    &kp P     &kp DELETE
-&trans         &kp BSPC     &kp F      &kp G                   &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J         &kp BSPC &kp SQT
+&trans         &kp BSPC  &kp BSPC &kp BSPC   &kp F      &kp G                   &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J   &kp BSPC &kp BSPC      &kp BSPC &kp SQT
 &tap_layer     &kp Z  &kp X  &kp C     &kp V      &kp B      &kp SPACE              &kp DOWN              &kp N        &kp M          &kp COMMA       &kp DOT  &kp FSLH  &key_repeat
                              &kp LGUI  &kp SPACE  &lt 1 TAB                                               &lt 2 ENTER  &kp BACKSPACE  &sk LEFT_SHIFT
             >;
