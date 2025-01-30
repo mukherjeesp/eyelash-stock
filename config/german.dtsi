@@ -48,17 +48,17 @@ ZMK_BEHAVIOR(fr_u_c, tap_dance,
 
 ZMK_BEHAVIOR(deae, tap_dance,
     tapping-term-ms = <200>;
-    bindings = <&kp LC(C)>, <&de_ae>;
+    bindings = <&kp LC(X)>, <&de_ae>;
 )
 
 ZMK_BEHAVIOR(deoe, tap_dance,
     tapping-term-ms = <200>;
-    bindings = <&kp LC(V)>, <&de_oe>;
+    bindings = <&bt BT_SEL 2>, <&de_oe>;
 )
 
 ZMK_BEHAVIOR(deue, tap_dance,
     tapping-term-ms = <200>;
-    bindings = <&kp LC(X)>, <&de_ue>;
+    bindings = <&bt BT_SEL 1>, <&de_ue>;
 )
 
 ZMK_BEHAVIOR(hrm, hold_tap,
