@@ -9,7 +9,7 @@
 
 #include <input/processors.dtsi>
 #include "zmk-helpers/unicode-chars/german.dtsi"
-
+#include "german.dtsi"
 
 
 
@@ -109,8 +109,8 @@
             display-name = "NUMBER";
             bindings = <
 &kp ESCAPE     &mt LG(LS(N1)) LG(NUMBER_1)  &mt LG(LS(N2)) LG(NUMBER_2)  &mt LG(LS(N3)) LG(NUMBER_3)  &mt LG(LS(N4)) LG(NUMBER_4)  &mt LG(LS(N5)) LG(N5)                                      &mmv MOVE_UP                     &bt BT_CLR    &bt BT_SEL 0      &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &studio_unlock
-&kp BACKSPACE  &kp K_CUT                    &kp K_COPY                   &kp K_PASTE                  &kp K_UNDO                   &kp K_REDO                                 &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp K_MUTE    &kp K_PLAY_PAUSE  &de_ae  &trans        &trans          &trans
-&trans         &trans                       &trans                       &trans                       &kp C_AC_HOME                &kp C_AL_LOGOFF        &kp C_PLAY_PAUSE                    &mmv MOVE_DOWN                   &trans        &trans            &trans           &trans       &trans        &trans 
+&kp BACKSPACE  &kp K_CUT                    &kp K_COPY                   &kp K_PASTE                  &kp K_UNDO                   &kp K_REDO                                 &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp K_MUTE    &kp K_PLAY_PAUSE  &de_ae  &deae        &trans          &trans
+&trans         &trans                       &trans                       &trans                       &kp C_AC_HOME                &kp C_AL_LOGOFF        &kp C_PLAY_PAUSE                    &mmv MOVE_DOWN                   &kp LEFT_SHIFT        &trans            &trans           &trans       &trans        &trans 
                                                                          &trans                       &trans                       &trans                                                                                      &kp LEFT_GUI  &kp BACKSPACE     &kp SPACE
             >;
 
