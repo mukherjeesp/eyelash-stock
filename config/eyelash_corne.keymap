@@ -9,6 +9,8 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 #include "german.dtsi"  // Move here
+#include "zmk-helpers/helper.h"
+
 
 
 /*
