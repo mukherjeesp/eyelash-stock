@@ -49,7 +49,7 @@
     };
 
     macros {
-        steno_1: steno_1 {
+        steno_br: steno_1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp B &kp R>;
@@ -110,10 +110,10 @@
 
         layer_4 {
             bindings = <
-&trans  &steno_1  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans    &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans    &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                          &trans  &trans  &trans                                    &trans  &trans  &trans
+&trans  &steno_br  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                           &trans  &trans  &trans                                    &trans  &trans  &trans
             >;
         };
     };
