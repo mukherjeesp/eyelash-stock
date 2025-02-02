@@ -1,7 +1,7 @@
 layers:
   base:
   - {t: '$$mdi:keyboard-esc$$', h: D}
-  - B
+  - X
   - W
   - M
   - P
@@ -18,7 +18,7 @@ layers:
   - S
   - T
   - H
-  - {t: ., h: ','}
+  - B
   - $$mdi:arrow-left-bold$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:arrow-right-bold$$
@@ -36,7 +36,7 @@ layers:
   - Z
   - $$mdi:volume-off$$
   - $$mdi:arrow-down-bold$$
-  - N
+  - {t: ., h: ','}
   - L
   - V
   - '&key_repeat'
