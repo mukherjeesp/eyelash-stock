@@ -69,10 +69,10 @@
 
         num+sym {
             bindings = <
-&kp DEL   &kp EQUAL  &kp N1  &kp N2  &kp N3     &kp LS(DLLR)                    &kp N4          &trans     &kp BSLH   &kp HASH  &kp PIPE  &kp GRAVE  &trans
-&kp BSPC  &kp EQUAL  &kp N4  &kp N5  &kp N6     &kp N0                  &trans  &trans  &trans  &kp CARET  &kp ASTRK  &kp FSLH  &kp PLUS  &kp MINUS  &trans
-&kp RET   &kp N0     &kp N7  &kp N8  &kp N9     &kp LS(PRCNT)  &none            &none           &none      &trans     &trans    &trans    &trans     &trans
-                             &trans  &kp SPACE  &kp DOT                                         &trans     &trans     &trans
+&kp DEL   &kp EQUAL    &kp N1  &kp N2  &kp N3     &kp DOLLAR                         &kp N4          &trans     &kp BSLH       &kp HASH          &kp PIPE  &kp GRAVE  &trans
+&kp BSPC  &key_repeat  &kp N4  &kp N5  &kp N6     &kp N0                     &trans  &trans  &trans  &kp CARET  &kp ASTRK      &kp FSLH          &kp PLUS  &kp MINUS  &trans
+&trans    &kp N0       &kp N7  &kp N8  &kp N9     &kp PERCENT       &none            &none           &none      &kp LESS_THAN  &kp GREATER_THAN  &trans    &trans     &trans
+                               &trans  &kp SPACE  &mt COMMA PERIOD                                   &trans     &trans         &trans
             >;
         };
 
