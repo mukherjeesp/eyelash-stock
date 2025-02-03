@@ -60,8 +60,8 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
-            display-name = "base";
+        base {
+            display-name = "0";
             bindings = <
 &mt LG(D) ESC  &kp X  &kp W        &kp M        &kp P  &mt QMARK EXCL                          &kp UP                &kp Q             &kp F  &kp O          &kp U        &kp J  &none
 &none          &kp R  &kp S        &kp T        &kp H  &kp B                         &kp LEFT  &kp ENTER  &kp RIGHT  &mt MINUS UNDER   &kp N  &kp A          &kp I        &kp C  &none
