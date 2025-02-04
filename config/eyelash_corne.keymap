@@ -129,6 +129,69 @@
             label = "MCRO_SAD";
             wait-ms = <0>;
         };
+
+        steno_ac: steno_ac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp A &kp C>;
+            label = "STENO_AC";
+        };
+
+        steno_ck: steno_ck {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp C &kp K>;
+            label = "STENO_CK";
+        };
+
+        steno_fl: steno_fl {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp F &kp L>;
+            label = "STENO_FL";
+        };
+
+        steno_lf: steno_lf {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp L &kp F>;
+            label = "STENO_LF";
+        };
+
+        steno_ou: steno_ou {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp O &kp U>;
+            label = "STENO_OU";
+        };
+
+        steno_af: steno_af {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp A &kp F>;
+            label = "STENO_AF";
+        };
+
+        steno_fe: steno_fe {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp F &kp E>;
+            label = "STENO_FE";
+        };
+
+        steno_ef: steno_ef {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp E &kp F>;
+            label = "STENO_EF";
+        };
+
+        steno_sw: steno_sw {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp S &kp W>;
+            label = "STENO_SW";
+        };
     };
 
     keymap {
@@ -158,19 +221,19 @@
 
         nav+hot {
             bindings = <
-&mt LC(DELETE) DELETE        &media  &trans  &none   &trans  &trans                    &trans          &trans       &trans          &mmv MOVE_UP    &trans           &trans     &trans
-&mt LC(BACKSPACE) BACKSPACE  &none   &none   &none   &none   &trans            &trans  &trans  &trans  &trans       &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp RCLK  &trans
-&kp LGUI                     &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans       &mt HOME PG_UP  &mt END PG_DN   &none            &none      &kp RGUI
-                                             &trans  &trans  &trans                                    &mcro_2Mclk  &mkp LCLK       &kp RG(RS(D))
+&mt LC(DELETE) DELETE        &media           &trans  &none   &trans  &trans                    &trans          &trans       &trans          &mmv MOVE_UP    &trans           &trans     &trans
+&mt LC(BACKSPACE) BACKSPACE  &kp PRINTSCREEN  &none   &none   &none   &trans            &trans  &trans  &trans  &trans       &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp RCLK  &trans
+&kp LGUI                     &trans           &trans  &trans  &trans  &trans  &trans            &trans          &trans       &mt HOME PG_UP  &mt END PG_DN   &none            &none      &kp RGUI
+                                                      &trans  &trans  &trans                                    &mcro_2Mclk  &mkp LCLK       &kp RG(RS(D))
             >;
         };
 
         steno {
             bindings = <
-&trans      &steno_br  &trans  &trans  &trans             &trans                    &trans          &trans  &trans             &trans  &trans  &trans  &trans
-&trans      &trans     &trans  &trans  &trans             &trans            &trans  &trans  &trans  &trans  &trans             &trans  &trans  &trans  &trans
-&sk LSHIFT  &steno_by  &trans  &trans  &trans             &trans  &trans            &trans          &trans  &trans             &trans  &trans  &trans  &sk RSHIFT
-                               &trans  &kp LC(BACKSPACE)  &trans                                    &none   &kp RC(BACKSPACE)  &trans
+&trans      &steno_br  &trans  &trans  &trans             &trans                    &trans          &trans     &steno_fl          &steno_ac  &steno_ou  &trans  &trans
+&trans      &trans     &trans  &trans  &trans             &trans            &trans  &trans  &trans  &steno_ef  &steno_fe          &steno_af  &trans     &trans  &trans
+&sk LSHIFT  &steno_by  &trans  &trans  &trans             &trans  &trans            &trans          &trans     &steno_lf          &steno_ck  &trans     &trans  &sk RSHIFT
+                               &trans  &kp LC(BACKSPACE)  &trans                                    &none      &kp RC(BACKSPACE)  &trans
             >;
         };
 
