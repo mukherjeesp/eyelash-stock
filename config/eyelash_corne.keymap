@@ -24,15 +24,6 @@
 
 / {
     behaviors {
-       &mt {
-    tapping-term-ms = <200>;
-    flavor = "tap-preferred";
-};
-
-&lt {
-    tapping-term-ms = <200>;
-};
-
         td0: td0 {
             compatible = "zmk,behavior-tap-dance";
             display-name = "Shift/Caps Lock Tap Dance";
@@ -129,6 +120,7 @@
             #binding-cells = <0>;
             bindings = <&kp S &kp DOT &kp D &kp E &kp L &kp L &kp O &kp N &kp DOT &kp M &kp O &kp Y>;
             label = "MCRO_SAD";
+            wait-ms = <0>;
         };
     };
 
