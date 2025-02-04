@@ -1,6 +1,6 @@
 layers:
   alpha:
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:keyboard-tab$$
   - B
   - W
   - M
@@ -42,12 +42,12 @@ layers:
   - '&key_repeat'
   - V
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: '$$mdi:keyboard-esc$$', h: 'Gui+$$mdi:keyboard-tab$$'}
+  - $$mdi:keyboard-esc$$
   - {t: '$$mdi:keyboard-space$$', h: nav+hot}
   - {t: steno, h: '$$mdi:gesture-tap-hold$$'}
   - {t: steno, h: '$$mdi:gesture-tap-hold$$'}
   - {t: E, h: num+sym}
-  - {t: 'AltGr+Ctl+$$mdi:backspace-reverse-outline$$', h: Gui+L}
+  - Alt+Ctl+$$mdi:backspace-reverse-outline$$
   num+sym:
   - $$mdi:backspace-reverse-outline$$
   - {t: '=', s: +}
@@ -220,7 +220,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '@'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held alternate}
