@@ -126,10 +126,10 @@
 
         steno {
             bindings = <
-&trans  &steno_br  &trans  &trans  &trans             &trans                    &trans          &trans  &trans             &trans  &trans  &trans  &trans
-&trans  &trans     &trans  &trans  &trans             &trans            &trans  &trans  &trans  &trans  &trans             &trans  &trans  &trans  &trans
-&trans  &steno_by  &trans  &trans  &trans             &trans  &trans            &trans          &trans  &trans             &trans  &trans  &trans  &trans
-                           &trans  &kp LC(BACKSPACE)  &trans                                    &none   &kp RC(BACKSPACE)  &trans
+&trans      &steno_br  &trans  &trans  &trans             &trans                    &trans          &trans  &trans             &trans  &trans  &trans  &trans
+&trans      &trans     &trans  &trans  &trans             &trans            &trans  &trans  &trans  &trans  &trans             &trans  &trans  &trans  &trans
+&sk LSHIFT  &steno_by  &trans  &trans  &trans             &trans  &trans            &trans          &trans  &trans             &trans  &trans  &trans  &sk RSHIFT
+                               &trans  &kp LC(BACKSPACE)  &trans                                    &none   &kp RC(BACKSPACE)  &trans
             >;
         };
 
