@@ -27,9 +27,7 @@
     flavor = "tap-preferred";
 };
 
-&lt {
-    tapping-term-ms = <200>;
-};
+&lt { tapping-term-ms = <200>; };
 
 / {
     behaviors {
@@ -138,10 +136,10 @@
 
         alpha {
             bindings = <
-&trans   &kp B           &kp W           &kp M               &kp P             &mt COMMA PERIOD                                 &kp UP_ARROW             &kp Q            &kp F              &kp C                     &kp U            &kp J            &trans
-&sl 4    &mt LEFT_GUI R  &mt LEFT_ALT S  &mt LCTRL T         &mt LEFT_SHIFT H  &kp X                            &kp LEFT_ARROW  &none         &kp RIGHT  &mt TILDE UNDER  &mt RIGHT_SHIFT N  &mt RCTRL A               &mt RIGHT_ALT I  &mt RIGHT_GUI O  &sl 4
-&kp RET  &kp Y           &key_repeat     &kp G               &kp D             &mt QUESTION EXCL  &kp LC(N0)                    &kp DOWN                 &kp Z            &kp L              &kp K                     &key_repeat      &kp V            &kp RET
-                                         &mt LG(TAB) ESCAPE  &lt 2 SPACE       &sl 3                                                                     &sl 3            &lt 1 E            &mt LG(L) RA(RC(DELETE))
+&kp TAB  &kp B           &kp W           &kp M        &kp P             &mt COMMA PERIOD                                 &kp UP_ARROW             &kp Q            &kp F              &kp C               &kp U            &kp J            &trans
+&sl 4    &mt LEFT_GUI R  &mt LEFT_ALT S  &mt LCTRL T  &mt LEFT_SHIFT H  &kp X                            &kp LEFT_ARROW  &none         &kp RIGHT  &mt TILDE UNDER  &mt RIGHT_SHIFT N  &mt RCTRL A         &mt RIGHT_ALT I  &mt RIGHT_GUI O  &sl 4
+&kp RET  &kp Y           &key_repeat     &kp G        &kp D             &mt QUESTION EXCL  &kp LC(N0)                    &kp DOWN                 &kp Z            &kp L              &kp K               &key_repeat      &kp V            &kp RET
+                                         &kp ESC      &lt 2 SPACE       &sl 3                                                                     &sl 3            &lt 1 E            &kp LA(LC(DELETE))
             >;
 
             sensor-bindings = <&inc_dec_kp LC(EQUAL) LC(MINUS)>;
@@ -179,7 +177,7 @@
         lazy {
             bindings = <
 &trans  &actIve_directory 0 0  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans                 &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans                 &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &kp AT  &trans  &trans  &trans
 &trans  &trans                 &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
                                        &trans  &trans  &trans                                    &trans  &trans  &trans
             >;
