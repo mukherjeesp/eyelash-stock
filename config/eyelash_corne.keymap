@@ -30,6 +30,25 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
+
+        actIve_directory: actIve_directory {
+            compatible = "zmk,behavior-hold-tap";
+            label = "ACTIVE_DIRECTORY";
+            bindings = <&mcro_sad>, <&mcro_ad>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
+            require-prior-idle-ms = <0>;
+            flavor = "tap-preferred";
+        };
+
+        media: media {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MEDIA";
+            #binding-cells = <0>;
+            bindings = <&mt C_PP C_NEXT>, <&kp C_PREV>;
+        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -88,6 +107,20 @@
             bindings = <&kp B &kp Y>;
             label = "STENO_BY";
         };
+
+        mcro_ad: mcro_ad {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp D &kp E &kp L &kp L &kp O &kp N &kp DOT &kp M &kp O &kp Y>;
+            label = "MCRO_AD";
+        };
+
+        mcro_sad: mcro_sad {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp S &kp DOT &kp D &kp E &kp L &kp L &kp O &kp N &kp DOT &kp M &kp O &kp Y>;
+            label = "MCRO_SAD";
+        };
     };
 
     keymap {
@@ -117,7 +150,7 @@
 
         nav+hot {
             bindings = <
-&mt LC(DELETE) DELETE        &trans  &trans  &none   &trans  &trans                    &trans          &trans       &trans          &mmv MOVE_UP    &trans           &trans     &trans
+&mt LC(DELETE) DELETE        &media  &trans  &none   &trans  &trans                    &trans          &trans       &trans          &mmv MOVE_UP    &trans           &trans     &trans
 &mt LC(BACKSPACE) BACKSPACE  &trans  &none   &none   &none   &trans            &trans  &trans  &trans  &trans       &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp RCLK  &trans
 &kp LGUI                     &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans       &mt HOME PG_UP  &mt END PG_DN   &none            &none      &kp RGUI
                                              &trans  &trans  &trans                                    &mcro_2Mclk  &mkp LCLK       &kp RG(RS(D))
@@ -135,10 +168,10 @@
 
         lazy {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans                                    &trans  &trans  &trans
+&trans  &actIve_directory 0 0  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans                 &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans                 &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                                       &trans  &trans  &trans                                    &trans  &trans  &trans
             >;
         };
     };
