@@ -6,7 +6,7 @@ layers:
   - M
   - P
   - {t: ., h: ','}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:arrow-up-bold$$
   - Q
   - F
   - C
@@ -19,9 +19,9 @@ layers:
   - {t: T, h: '$$mdi:apple-keyboard-control$$'}
   - {t: H, h: '$$mdi:apple-keyboard-shift$$'}
   - X
+  - $$mdi:arrow-left-bold$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:arrow-right-bold$$
   - {t: _, h: '~'}
   - {t: N, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: A, h: '$$mdi:apple-keyboard-control$$'}
@@ -35,7 +35,7 @@ layers:
   - D
   - {t: '!', h: '?'}
   - {t: Ctl+0, s: Ctl+)}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:arrow-down-bold$$
   - Z
   - L
   - K
