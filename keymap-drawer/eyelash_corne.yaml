@@ -83,7 +83,7 @@ layers:
   - {t: '8', s: '*'}
   - {t: '9', s: (}
   - '%'
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:volume-off$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - <
