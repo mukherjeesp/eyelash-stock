@@ -47,11 +47,11 @@
     };
 
     macros {
-        steno_br: steno_1 {
+        steno_br: steno_br {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp B &kp R>;
-            label = "STENO_1";
+            label = "STENO_BR";
         };
 
         mcro_sQuote: mcro_sQuote {
@@ -105,10 +105,10 @@
 
         steno {
             bindings = <
-&trans  &trans  &trans  &trans  &trans             &trans                    &trans          &trans  &trans             &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans             &trans            &trans  &trans  &trans  &trans  &trans             &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans             &trans  &trans            &trans          &trans  &trans             &trans  &trans  &trans  &trans
-                        &trans  &kp LC(BACKSPACE)  &trans                                    &none   &kp RC(BACKSPACE)  &trans
+&trans  &steno_br  &trans  &trans  &trans             &trans                    &trans          &trans  &trans             &trans  &trans  &trans  &trans
+&trans  &trans     &trans  &trans  &trans             &trans            &trans  &trans  &trans  &trans  &trans             &trans  &trans  &trans  &trans
+&trans  &trans     &trans  &trans  &trans             &trans  &trans            &trans          &trans  &trans             &trans  &trans  &trans  &trans
+                           &trans  &kp LC(BACKSPACE)  &trans                                    &none   &kp RC(BACKSPACE)  &trans
             >;
         };
 
