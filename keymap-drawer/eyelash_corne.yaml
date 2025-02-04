@@ -12,7 +12,7 @@ layers:
   - C
   - U
   - J
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: F5, h: F2}
   - {t: lazy, h: '$$mdi:gesture-tap-hold$$'}
   - {t: R, h: '$$mdi:apple-keyboard-command$$'}
   - {t: S, h: '$$mdi:apple-keyboard-option$$'}
