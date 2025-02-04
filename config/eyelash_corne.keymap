@@ -272,10 +272,10 @@
 
         steno {
             bindings = <
-&trans      &steno_br  &trans  &trans  &trans             &trans                    &trans          &trans     &steno_fl          &steno_ac  &steno_ou  &trans  &trans
-&trans      &trans     &trans  &trans  &trans             &trans            &trans  &trans  &trans  &steno_ef  &steno_fe          &steno_af  &trans     &trans  &trans
-&sk LSHIFT  &steno_by  &trans  &trans  &trans             &trans  &trans            &trans          &trans     &steno_lf          &steno_ck  &trans     &trans  &sk RSHIFT
-                               &trans  &kp LC(BACKSPACE)  &trans                                    &none      &kp RC(BACKSPACE)  &trans
+&trans      &steno_br  &trans  &trans  &trans             &trans                    &trans          &none      &steno_fl          &steno_ac  &steno_ou  &trans  &none
+&trans      &trans     &trans  &trans  &trans             &trans            &trans  &trans  &trans  &steno_ef  &steno_fe          &steno_af  &none      &none   &none
+&sk LSHIFT  &steno_by  &trans  &trans  &trans             &none   &trans            &trans          &none      &steno_lf          &steno_ck  &trans     &trans  &sk RSHIFT
+                               &trans  &kp LC(BACKSPACE)  &trans                                    &none      &kp RC(BACKSPACE)  &none
             >;
         };
 
