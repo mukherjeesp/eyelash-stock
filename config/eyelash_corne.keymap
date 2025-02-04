@@ -3,6 +3,8 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
 /*
@@ -64,6 +66,20 @@
             #binding-cells = <0>;
             bindings = <&mkp LCLK &mkp LCLK>;
             label = "MCRO_2MCLK";
+        };
+
+        mcro_na: mcro_na {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N) &kp FSLH &kp LS(A)>;
+            label = "MCRO_NA";
+        };
+
+        mcro_2025: mcro_2025 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N2 &kp N0 &kp N2 &kp N5>;
+            label = "MCRO_2025";
         };
     };
 
