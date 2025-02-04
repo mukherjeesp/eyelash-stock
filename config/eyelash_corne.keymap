@@ -22,15 +22,6 @@
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1200  // 600
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
 
-&mt {
-    tapping-term-ms = <200>;
-    flavor = "tap-preferred";
-};
-
-&lt {
-    tapping-term-ms = <200>;
-};
-
 / {
     behaviors {
         td0: td0 {
@@ -118,7 +109,7 @@
 &kp DEL   &kp EQUAL    &kp N1  &kp N2  &kp N3     &kp DOLLAR                              &none           &trans     &kp BSLH       &kp HASH          &kp PIPE  &mt DOUBLE_QUOTES SINGLE_QUOTE  &trans
 &kp BSPC  &key_repeat  &kp N4  &kp N5  &kp N6     &kp N0                          &trans  &trans  &trans  &kp CARET  &kp ASTRK      &kp FSLH          &kp PLUS  &kp MINUS                       &trans
 &trans    &kp N0       &kp N7  &kp N8  &kp N9     &kp PERCENT       &kp C_MUTE            &none           &none      &kp LESS_THAN  &kp GREATER_THAN  &trans    &mt COLON SEMICOLON             &trans
-                               &trans  &kp SPACE  &mt COMMA PERIOD                                        &trans     &trans         &trans
+                               &none   &kp SPACE  &mt COMMA PERIOD                                        &none      &none          &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
