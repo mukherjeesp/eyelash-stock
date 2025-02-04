@@ -6,7 +6,7 @@ layers:
   - M
   - P
   - {t: ., h: ','}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - Q
   - F
   - C
@@ -19,9 +19,9 @@ layers:
   - T
   - H
   - X
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - {t: _, h: '-'}
   - N
   - A
@@ -35,7 +35,7 @@ layers:
   - D
   - {t: '!', h: '?'}
   - {t: Ctl+0, s: Ctl+)}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - Z
   - L
   - K
@@ -47,7 +47,7 @@ layers:
   - {t: steno, h: '$$mdi:gesture-tap-hold$$'}
   - {t: steno, h: '$$mdi:gesture-tap-hold$$'}
   - {t: E, h: num+sym}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: 'AltGr+Ctl+$$mdi:backspace-reverse-outline$$', h: Gui+L}
   num+sym:
   - $$mdi:backspace-reverse-outline$$
   - {t: '=', s: +}
@@ -55,7 +55,7 @@ layers:
   - {t: '2', s: '@'}
   - {t: '3', s: '#'}
   - $
-  - {t: '4', s: $}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: \, s: '|'}
   - '#'
