@@ -147,10 +147,10 @@
 
         num+sym {
             bindings = <
-&kp DEL   &kp EQUAL    &kp N1  &kp N2  &kp N3     &kp DOLLAR                              &none           &trans     &kp BSLH       &kp HASH          &kp PIPE  &mt DOUBLE_QUOTES SINGLE_QUOTE  &trans
-&kp BSPC  &key_repeat  &kp N4  &kp N5  &kp N6     &kp N0                          &trans  &trans  &trans  &kp CARET  &kp ASTRK      &kp FSLH          &kp PLUS  &kp MINUS                       &trans
-&trans    &kp N0       &kp N7  &kp N8  &kp N9     &kp PERCENT       &kp C_MUTE            &none           &none      &kp LESS_THAN  &kp GREATER_THAN  &trans    &mt COLON SEMICOLON             &trans
-                               &none   &kp SPACE  &mt COMMA PERIOD                                        &none      &none          &none
+&kp DEL   &kp EQUAL    &kp N1  &kp N2  &kp N3     &kp DOLLAR                              &none           &kp GRAVE  &kp BSLH                        &kp HASH                            &kp PIPE                     &mt DOUBLE_QUOTES SINGLE_QUOTE  &none
+&kp BSPC  &key_repeat  &kp N4  &kp N5  &kp N6     &kp N0                          &trans  &trans  &trans  &kp CARET  &kp ASTRK                       &kp FSLH                            &kp PLUS                     &kp MINUS                       &mt COLON SEMICOLON
+&trans    &kp N0       &kp N7  &kp N8  &kp N9     &kp PERCENT       &kp C_MUTE            &none           &none      &mt LESS_THAN LEFT_PARENTHESIS  &mt GREATER_THAN RIGHT_PARENTHESIS  &mt LEFT_BRACE LEFT_BRACKET  &mt RIGHT_BRACE RIGHT_BRACKET   &none
+                               &none   &kp SPACE  &mt COMMA PERIOD                                        &none      &none                           &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -159,7 +159,7 @@
         nav+hot {
             bindings = <
 &mt LC(DELETE) DELETE        &media  &trans  &none   &trans  &trans                    &trans          &trans       &trans          &mmv MOVE_UP    &trans           &trans     &trans
-&mt LC(BACKSPACE) BACKSPACE  &trans  &none   &none   &none   &trans            &trans  &trans  &trans  &trans       &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp RCLK  &trans
+&mt LC(BACKSPACE) BACKSPACE  &none   &none   &none   &none   &trans            &trans  &trans  &trans  &trans       &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp RCLK  &trans
 &kp LGUI                     &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans       &mt HOME PG_UP  &mt END PG_DN   &none            &none      &kp RGUI
                                              &trans  &trans  &trans                                    &mcro_2Mclk  &mkp LCLK       &kp RG(RS(D))
             >;
