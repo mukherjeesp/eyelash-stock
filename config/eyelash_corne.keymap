@@ -110,10 +110,10 @@
 
         nav+hot {
             bindings = <
-&mt LC(DELETE) DELETE        &trans  &trans    &kp UP    &trans     &trans                    &trans          &trans       &trans          &mmv MOVE_UP    &trans           &trans      &trans
-&mt LC(BACKSPACE) BACKSPACE  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans            &trans  &trans  &trans  &trans       &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp RCLK   &trans
-&kp LGUI                     &trans  &trans    &trans    &trans     &trans  &trans            &trans          &trans       &mt HOME PG_UP  &mt END PG_DN   &sk RCTRL        &sk RSHIFT  &kp RGUI
-                                               &trans    &trans     &trans                                    &mcro_2Mclk  &mkp LCLK       &kp RG(RS(D))
+&mt LC(DELETE) DELETE        &trans  &trans  &none   &trans  &trans                    &trans          &trans       &trans          &mmv MOVE_UP    &trans           &trans     &trans
+&mt LC(BACKSPACE) BACKSPACE  &trans  &none   &none   &none   &trans            &trans  &trans  &trans  &trans       &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp RCLK  &trans
+&kp LGUI                     &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans       &mt HOME PG_UP  &mt END PG_DN   &none            &none      &kp RGUI
+                                             &trans  &trans  &trans                                    &mcro_2Mclk  &mkp LCLK       &kp RG(RS(D))
             >;
         };
 
