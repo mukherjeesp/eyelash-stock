@@ -16,15 +16,8 @@ manifest:
       url: https://github.com/a741725193/zmk-new_corne
       revision: main
     - name: zmk
-      remote: zmkfirmware
+      remote: urob
       revision: main
       import: app/west.yml
-      
-    - name: zmk-auto-layer
-      remote: urob
-      revision: main
-    - name: zmk-tri-state
-      remote: urob
-      revision: main
   self:
     path: config
