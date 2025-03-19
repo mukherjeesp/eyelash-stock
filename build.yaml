@@ -14,4 +14,14 @@ include:
   - board: eyelash_corne_left
     shield: settings_reset
     #snippet: zmk-usb-logging
- 
+  - board: eyelash_corne_left
+    cmake-args: -DEXTRA_CONF_FILE=boards/arm/eyelash_corne/trackpoint.conf -DZMK_CONFIG="${GITHUB_WORKSPACE}/zmk-new_corne/config"
+    artifact-name: eyelash_corne_trackpoint_left
+  - board: eyelash_corne_right
+    cmake-args: >-
+      -DEXTRA_CONF_FILE=boards/arm/eyelash_corne/trackpoint.conf
+      -DZMK_CONFIG="${GITHUB_WORKSPACE}/zmk-new_corne/config"
+      -DOVERLAY_CONFIG=boards/arm/eyelash_corne/trackpoint.overlay
+      -DKEYMAP_FILE="eyelash_corne_trackpoint.keymap"
+    artifact-name: eyelash_corne_trackpoint_right
+

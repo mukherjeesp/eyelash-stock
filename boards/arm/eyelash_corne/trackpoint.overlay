@@ -1,0 +1,148 @@
+/*
+ * Trackpoint support for eyelash_corne
+ * Adapted from kb_zmk_ps2_mouse_trackpoint_driver-zmk_config
+ */
+
+#include <dt-bindings/zmk/matrix_transform.h>
+
+/*
+ * PS/2 Mouse / TrackPoint - User Configuration
+ */
+
+// Use UART-based PS/2 driver
+#define MOUSE_PS2_DRIVER_UART
+
+// Pin definitions for trackpoint (using native nRF52 pin numbers)
+// Selected unused GPIO pins that should work for PS/2
+// PIN P0.16 (high frequency) for clock
+// PIN P0.18 (high frequency) for data
+// PIN P0.15 for reset
+#define MOUSE_PS2_PIN_SCL <&gpio0 16 GPIO_ACTIVE_HIGH>
+#define MOUSE_PS2_PIN_SDA <&gpio0 18 GPIO_ACTIVE_HIGH>
+#define MOUSE_PS2_PIN_RST <&gpio0 15 GPIO_ACTIVE_HIGH>
+
+// Configure SDA pin using the pinctrl notation
+#define MOUSE_PS2_PIN_SDA_PINCTRL <NRF_PSEL(UART_RX, 0, 18)>
+
+// Configure the unexposed pins for UART
+#define MOUSE_PS2_PIN_UNEXPOSED_TX <NRF_PSEL(UART_TX, 0, 27)>
+#define MOUSE_PS2_PIN_UNEXPOSED_RX <NRF_PSEL(UART_RX, 0, 28)>
+
+// UART baud rate for PS/2 communication
+#define MOUSE_PS2_UART_BAUD_RATE <14400>
+
+// Define this to use in the keymap
+#define MOUSE_PS2_DT_PRESENT
+
+/*
+ * PS/2 Mouse / TrackPoint - Interrupt Priority Configuration
+ */
+
+// Ensure GPIOTE has the highest priority (0) for fast PS/2 response
+&gpiote {
+    interrupts = <6 0>;
+};
+
+// Set lower priority (3) for most peripherals to ensure PS/2 events are handled quickly
+&clock {
+    interrupts = <0 3>;
+};
+
+&power {
+    interrupts = <0 3>;
+};
+
+&radio {
+    interrupts = <1 3>;
+};
+
+&pwm0 {
+    interrupts = <28 3>;
+};
+
+&spi3 {
+    interrupts = <47 3>;
+};
+
+/*
+ * PS/2 Mouse / TrackPoint - Hardware Configuration
+ */
+
+&pinctrl {
+    // Pin configuration for UART in PS/2 mode
+    uart0_ps2_default: uart0_ps2_default {
+        group1 {
+            psels = MOUSE_PS2_PIN_UNEXPOSED_TX,
+                    MOUSE_PS2_PIN_SDA_PINCTRL;
+        };
+    };
+
+    uart0_ps2_sleep: uart0_ps2_sleep {
+        group1 {
+            psels = MOUSE_PS2_PIN_UNEXPOSED_TX,
+                    MOUSE_PS2_PIN_SDA_PINCTRL;
+            low-power-enable;
+        };
+    };
+
+    uart0_ps2_off: uart0_ps2_off {
+        group1 {
+            psels = MOUSE_PS2_PIN_UNEXPOSED_TX,
+                    MOUSE_PS2_PIN_UNEXPOSED_RX;
+        };
+    };
+};
+
+// UART configuration for PS/2 communication
+&uart0 {
+    status = "okay";
+    compatible = "nordic,nrf-uarte";
+    current-speed = MOUSE_PS2_UART_BAUD_RATE;
+    pinctrl-0 = <&uart0_ps2_default>;
+    pinctrl-1 = <&uart0_ps2_off>;
+    pinctrl-names = "default", "sleep";
+
+    uart_ps2: uart_ps2 {
+        status = "okay";
+        compatible = "uart-ps2";
+        scl-gpios = MOUSE_PS2_PIN_SCL;
+        sda-gpios = MOUSE_PS2_PIN_SDA;
+    };
+};
+
+/ {
+    mouse_ps2: mouse_ps2 {
+        status = "okay";
+        compatible = "zmk,input-mouse-ps2";
+
+        ps2-device = <&uart_ps2>;
+        rst-gpios = MOUSE_PS2_PIN_RST;
+
+        // Trackpoint specific configuration
+        // Uncomment and adjust these values as needed
+        // tp-sensitivity = <128>;
+        // tp-val6-upper-speed = <97>;
+        // tp-neg-inertia = <6>;
+        // tp-press-to-select;
+        // tp-press-to-select-threshold = <10>;
+        // tp-xy-swap;
+        // tp-x-invert;
+        // tp-y-invert;
+        // sampling-rate = <100>;
+    };
+
+    mouse_ps2_input_listener: mouse_ps2_input_listener {
+        compatible = "zmk,input-listener-ps2";
+        status = "okay";
+        device = <&mouse_ps2>;
+
+        // Optional behavior configuration
+        // Uncomment and adjust these as needed
+        // xy-swap;
+        // x-invert;
+        // y-invert;
+        // layer-toggle = <3>; // Adjust to your preferred mouse layer
+        // layer-toggle-delay-ms = <250>;
+        // layer-toggle-timeout-ms = <250>;
+    };
+};
